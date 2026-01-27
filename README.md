@@ -1,3 +1,17 @@
+# PrimeRevenue - Alert
+
+For this exercise, you’ll be collaborating with our UX designer @Ondrej Barcak to build a simple component from a Figma design. Please work directly with Ondrej to ask any clarifying questions about the design and expected functionality/behavior. Please direct any technical questions to me.
+
+https://www.figma.com/design/ya8XpcQABVJzkif4hL2WNo/UI-Exercise---Marco-Friso?node-id=0-1&m=dev&t=jpl9iFYV1rJLarrp-1
+
+When submitting the completed exercise, please provide the following:
+
+- Access to a repository with your code
+- A URL to review the finished web product
+- If you choose to use AI for this exercise, also provide a write-up of how you approached working with AI, examples of prompts you used, and how you validated the quality of the end result.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
