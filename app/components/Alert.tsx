@@ -27,46 +27,42 @@ export default function Alert({
 }: AlertProps) {
   return (
     <div role={role} aria-live="polite" className="mx-auto max-w-198 px-6 py-4">
-      <div className="flex rounded-md outline outline-orange-400 bg-red-50 p-4 text-pr-sky shadow-sm text-red-800">
-        <div className="flex-1 flex flex-col gap-3">
-          <div className="flex flex-col gap-1.5">
-            <div className="flex items-start justify-between">
-              <div className="flex gap-2">
-                {showIcon ? (
-                  <span className="my-auto">
-                    <CheckCircleIcon />
-                  </span>
-                ) : null}
-                <h3 className="text-md font-semibold leading-normal">
-                  {title}
-                </h3>
-              </div>
-              {showClose ? (
-                <button
-                  type="button"
-                  onClick={onClose}
-                  aria-label="Close alert"
-                  className="inline-flex items-center justify-center rounded-full text-red-800 transition hover:bg-red-200 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-red-600 mt-0 cursor-pointer"
-                >
-                  <CloseIcon />
-                </button>
+      <div className="flex rounded-md outline outline-orange-400 bg-red-50 p-4 text-red-800 gap-3 flex-col">
+        <div className="flex flex-col gap-1.5">
+          <div className="flex items-start justify-between">
+            <div className="flex gap-2">
+              {showIcon ? (
+                <span className="my-auto">
+                  <CheckCircleIcon />
+                </span>
               ) : null}
+              <h3 className="text-md font-semibold leading-normal">{title}</h3>
             </div>
-            <p className="text-sm leading-normal text-red-800 font-normal">
-              {body}
-            </p>
+            {showClose ? (
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close alert"
+                className="inline-flex items-center justify-center text-red-800 transition hover:bg-red-200 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-red-600 cursor-pointer"
+              >
+                <CloseIcon />
+              </button>
+            ) : null}
           </div>
-          {ctaLabel ? (
-            <button
-              type="button"
-              onClick={onCta}
-              className="w-fit inline-flex items-center gap-2 rounded-lg bg-red-600 px-3 py-2 text-xs font-medium text-white leading-normal transition hover:bg-red-800 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-red-600 cursor-pointer"
-            >
-              {showCtaIcon ? <EyeIcon /> : null}
-              {ctaLabel}
-            </button>
-          ) : null}
+          <p className="text-sm leading-normal text-red-800 font-normal">
+            {body}
+          </p>
         </div>
+        {ctaLabel ? (
+          <button
+            type="button"
+            onClick={onCta}
+            className="w-fit inline-flex items-center gap-2 rounded-lg bg-red-600 px-3 py-2 text-xs font-medium text-white leading-normal transition hover:bg-red-800 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-red-600 cursor-pointer"
+          >
+            {showCtaIcon ? <EyeIcon /> : null}
+            {ctaLabel}
+          </button>
+        ) : null}
       </div>
     </div>
   );

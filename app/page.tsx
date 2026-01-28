@@ -9,7 +9,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-10">
+    <div className="min-h-screen px-6 py-10">
       <main className="mx-auto flex w-full max-w-5xl flex-col gap-10">
         <header className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
@@ -26,22 +26,24 @@ export default function Home() {
           <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
             Interactive
           </h2>
-          {isOpen ? (
-            <Alert
-              title="Alert heading"
-              body={defaultBody}
-              ctaLabel="View more"
-              onClose={() => setIsOpen(false)}
-            />
-          ) : (
-            <button
-              type="button"
-              onClick={() => setIsOpen(true)}
-              className="w-fit text-sm font-semibold text-red-800 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-red-600"
-            >
-              Reopen alert
-            </button>
-          )}
+          <div className="min-h-45.5">
+            {isOpen ? (
+              <Alert
+                title="Alert heading"
+                body={defaultBody}
+                ctaLabel="View more"
+                onClose={() => setIsOpen(false)}
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setIsOpen(true)}
+                className="w-fit text-sm font-semibold text-red-600 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-red-600"
+              >
+                Reopen alert
+              </button>
+            )}
+          </div>
         </section>
 
         <section className="flex flex-col gap-6">
@@ -55,10 +57,11 @@ export default function Home() {
               ctaLabel="View more"
             />
             <Alert
-              title="Alert without icon"
+              title="Alert without icons"
               body={defaultBody}
               ctaLabel="View more"
               showIcon={false}
+              showCtaIcon={false}
             />
             <Alert title="Alert without CTA" body={defaultBody} />
             <Alert
